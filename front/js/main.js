@@ -4,11 +4,8 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       wheel = document.querySelector('.bonus__main-wheel-reel'),
       overlay = document.querySelector('.bonus__overlay'),
       popupFirst = document.querySelector('.bonus__firstWin'),
-      popupFirstBtn = document.querySelector('.bonus__firstWin-btn'),
-      popupSecond = document.querySelector('.bonus__secondWin'),
       overflow = document.querySelector('body'),
       wrapper = document.querySelector('.bonus'),
-      copyBtn = document.querySelector('.bonus__secondWin-code-btn'),
       bonusStart = document.querySelector('.bonus__start'),
       bonusText = document.querySelector('.bonus__text'),
       audioCoin = document.querySelector('.audio-coins'),
@@ -17,11 +14,16 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       audioWheel = document.querySelector('.audio-wheel'),
       btnVolume = document.querySelector('.bonus__music'),
       btnVolumeImg = document.querySelector('.bonus__music-img'),
-      body = document.querySelector('body')
+      body = document.querySelector('body'),
+      allLink = document.querySelector('.all-link')
 
 audioMain.volume = 0.35
 audioFirework.volume = 0.6
 audioCoin.volume = 0.6
+
+// audioMain.volume = 0
+// audioFirework.volume = 0
+// audioCoin.volume = 0
 
 function scrollToTop() {
     const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
@@ -63,21 +65,6 @@ setTimeout(function (){
 
 }, 3500);
 
-copyBtn.addEventListener('click', () => {
-    copyBtn.classList.add('_copy')
-    setTimeout(()=>{
-        copyBtn.classList.remove('_copy')
-    }, 2000)
-    let textToCopy = "egyptsem";
-    // Копируем текст в буфер обмена
-    navigator.clipboard.writeText(textToCopy)
-        .then(function() {
-            console.log('copy code')
-        })
-        .catch(function(error) {
-            console.error('error', error);
-        });
-})
 
 playBtn.addEventListener('click', () => {
     runFirstRotation()
@@ -103,6 +90,7 @@ function runFirstRotation() {
 }
 
 function doAfterFirstRotation() {
+    allLink.style.display = 'block'
     audioCoin.play()
     wheel.style.transform = 'rotate(992deg)'
     wheel.classList.remove('reel-rotation-first')
@@ -112,11 +100,6 @@ function doAfterFirstRotation() {
 }
 
 
-popupFirstBtn.addEventListener('click', () => {
-    popupFirst.classList.add('_opacity')
-    popupSecond.classList.remove('_opacity')
-})
-
 function displayPopup(popup) {
     overlay.classList.remove('opacity-overlay')
     popup.classList.remove('hide')
@@ -125,8 +108,6 @@ function displayPopup(popup) {
 window.addEventListener('orientationchange', () => {
     window.location.reload()
 });
-
-
 
 
 
