@@ -15,7 +15,8 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       btnVolume = document.querySelector('.bonus__music'),
       btnVolumeImg = document.querySelector('.bonus__music-img'),
       body = document.querySelector('body'),
-      allLink = document.querySelector('.all-link')
+      allLink = document.querySelector('.all-link'),
+      popupText = document.querySelector('.bonus__firstWin-text')
 
 audioMain.volume = 0.35
 audioFirework.volume = 0.6
@@ -90,6 +91,7 @@ function runFirstRotation() {
 }
 
 function doAfterFirstRotation() {
+    popupText.classList.add('_visible')
     allLink.style.display = 'block'
     audioCoin.play()
     wheel.style.transform = 'rotate(992deg)'
@@ -105,9 +107,9 @@ function displayPopup(popup) {
     popup.classList.remove('hide')
 }
 
-// window.addEventListener('orientationchange', () => {
-//     window.location.reload()
-// });
+window.addEventListener('orientationchange', () => {
+    window.location.reload()
+});
 
 
 
