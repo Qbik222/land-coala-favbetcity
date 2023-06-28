@@ -105,9 +105,9 @@ function displayPopup(popup) {
     popup.classList.remove('hide')
 }
 
-window.addEventListener('orientationchange', () => {
-    window.location.reload()
-});
+// window.addEventListener('orientationchange', () => {
+//     window.location.reload()
+// });
 
 
 

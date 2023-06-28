@@ -311,6 +311,54 @@ body
   &__firstWin
     position: relative
     z-index: 20
+    &-text
+      min-width: 900px
+      max-width: 900px
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 30
+      text-align: center
+      bottom: 10px
+      font-family: $font-suisse-reg
+      font-size: 14px
+      line-height: 22px
+      color: #FFFFFF
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
+      transition: opacity 1s ease, visibility .3s ease
+      @media screen and (max-width: 920px)
+        min-width: 520px
+        max-width: 520px
+        font-size: 10px
+        line-height: 18px
+      @media screen and (max-width: 600px)
+        min-width: 300px
+        max-width: 300px
+        font-size: 8px
+        line-height: 13px
+      @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        min-width: 430px
+        max-width: 430px
+        font-size: 8px
+        line-height: 13px
+      a
+        font-size: 14px
+        line-height: 22px
+        pointer-events: initial
+        color: #FFFFFF
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
+        text-decoration: underline
+        @media screen and (max-width: 920px)
+          font-size: 10px
+          line-height: 18px
+        @media screen and (max-width: 600px)
+          font-size: 8px
+          line-height: 13px
+        @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          font-size: 8px
+          line-height: 13px
+        &:hover
+          text-decoration: none
     &-salutOne
       top: 240px
       left: -130px
