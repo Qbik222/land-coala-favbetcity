@@ -94,7 +94,7 @@ function doAfterFirstRotation() {
     popupText.classList.add('_visible')
     allLink.style.display = 'block'
     audioCoin.play()
-    wheel.style.transform = 'rotate(992deg)'
+    wheel.style.transform = 'rotate(1440deg)'
     wheel.classList.remove('reel-rotation-first')
     displayPopup(popupFirst)
     wrapper.style.pointerEvents = 'auto'
@@ -167,4 +167,17 @@ window.addEventListener('orientationchange', () => {
         }
     });
 })();
+
+const popupFirstBtn = document.querySelector(".show-popup");
+const popupFirstBtnClose = document.querySelector(".close-popup");
+
+popupFirstBtn.addEventListener("click", () =>{
+    displayPopup(popupFirst)
+})
+
+popupFirstBtnClose.addEventListener("click", () =>{
+    overlay.classList.add('opacity-overlay')
+    popupFirst.classList.add('hide')
+})
+
 

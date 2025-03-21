@@ -70,6 +70,20 @@
         transform-origin: bottom center
         transform: scale(.95)
 
+
+@media screen and (max-width: 1710px) and (max-height: 910px)
+  .bonus
+    &__main
+      &-container
+        transform: scale(.8)
+
+@media screen and (max-width: 1710px) and (max-height: 810px)
+  .bonus
+    &__main
+      &-container
+        transform: scale(.7)
+
+
 @media screen and (max-width: 1700px) and (max-height: 940px)
   .bonus
     &__main
@@ -265,9 +279,9 @@
         background: none
     &__legal
       display: flex
-      height: 154px
+      //height: 154px
       font-size: 4.75vw
-      line-height: 62px
+      //line-height: 62px
       text-align: center
 
 @media screen and (max-width: 1300px) and (max-height: 850px)
@@ -669,7 +683,7 @@
 
 /************************************LANDSCAPE************************************/
 
-@media screen and (max-width: 920px) and (max-height: 450px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape)
   .bonus
     &__legal-desc
       display: none
@@ -778,7 +792,7 @@
         transform-origin: right center
         transform: scale(0.8)
 
-@media screen and (max-width: 920px) and (max-height: 435px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 435px) and (orientation: landscape)
   .bonus
     &__firstWin
       &-info
@@ -787,7 +801,7 @@
       &-container
         transform: scale(0.34)
 
-@media screen and (max-width: 920px) and (max-height: 400px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 400px) and (orientation: landscape)
   .bonus
     &__firstWin
       &-info
@@ -796,7 +810,7 @@
       &-container
         transform: scale(0.3)
 
-@media screen and (max-width: 920px) and (max-height: 365px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 365px) and (orientation: landscape)
   .bonus
     &__firstWin
       &-info
@@ -805,7 +819,7 @@
       &-container
         transform: scale(0.27)
 
-@media screen and (max-width: 920px) and (max-height: 340px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 340px) and (orientation: landscape)
   .bonus
     &__firstWin
       &-info
@@ -814,7 +828,7 @@
       &-container
         transform: scale(0.24)
 
-@media screen and (max-width: 920px) and (max-height: 310px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 310px) and (orientation: landscape)
   .bonus
     &__firstWin
       &-text
@@ -947,7 +961,7 @@
       &-logo
         width: 299px
 
-@media screen and (max-width: 1040px) and (orientation: portrait)
+@media screen and (max-width: 1300px) and (orientation: portrait)
   .bonus
     &__start
       &-logo
@@ -1033,7 +1047,7 @@
         bottom: 107px
         transform: translateX(-49.7%) scale(0.4)
 
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+@media screen and (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
   .bonus
     &__start
       &-logo
@@ -1043,28 +1057,28 @@
         transform-origin: bottom center
         transform: translateX(-49%) scale(0.55)
 
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 415px)
+@media screen and (max-width: 950px) and (orientation: landscape) and (max-height: 415px)
   .bonus
     &__start
       &-wrap
         bottom: 35px
         transform: translateX(-49%) scale(0.5)
 
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 380px)
+@media screen and (max-width: 950px) and (orientation: landscape) and (max-height: 380px)
   .bonus
     &__start
       &-wrap
         bottom: 40px
         transform: translateX(-49%) scale(0.45)
 
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 350px)
+@media screen and (max-width: 950px) and (orientation: landscape) and (max-height: 350px)
   .bonus
     &__start
       &-wrap
         bottom: 45px
         transform: translateX(-49%) scale(0.4)
 
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 318px)
+@media screen and (max-width: 950px) and (orientation: landscape) and (max-height: 318px)
   .bonus
     &__start
       &-wrap
@@ -1078,7 +1092,7 @@
       a
         font-size: 9px
 
-@media screen and (max-width: 920px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (orientation: landscape)
   .bonus
     &__text
       font-size: 8px
@@ -1149,7 +1163,7 @@
         font-size: 8px
         line-height: 14px
 
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+@media screen and (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
   .bonus
     &__text
       font-size: 7px
@@ -1177,7 +1191,28 @@
     &__text
       bottom: 120px
 
-@media screen and (max-width: 920px) and (max-height: 450px) and (orientation: landscape)
+@media screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape)
   .bonus
     &__text
       line-height: 11px !important
+
+
+
+/************************************ Fold ************************************/
+@media screen and (max-width: 839px) and (min-width: 810px) and (max-height: 690px) and (min-height: 500px)
+  .bonus
+    &__start
+      &-logo
+        width: 180px
+      &-board
+        transform: scale(.9)
+        transform-origin: center bottom
+    &__main
+      &-logo
+        width: 180px
+      &-container
+        transform: scale(.43)
+
+@media screen and (max-width: 728px) and (min-width: 691px) and (max-height: 708px) and (min-height: 540px)
+
+
