@@ -173,11 +173,13 @@ const popupFirstBtnClose = document.querySelector(".close-popup");
 
 popupFirstBtn.addEventListener("click", () =>{
     displayPopup(popupFirst)
+    popupText.classList.add('_visible')
 })
 
 popupFirstBtnClose.addEventListener("click", () =>{
     overlay.classList.add('opacity-overlay')
     popupFirst.classList.add('hide')
+    popupText.classList.remove('_visible')
 })
 
 
