@@ -189,6 +189,11 @@
           &-google
             width: 90px
 
+@media screen and (max-width: 1500px) and (max-height: 710px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-container
+        transform: scale(.6)
 
 @media screen and (max-width: 1400px)
   .bonus
@@ -1235,10 +1240,20 @@
 
 @media screen and (max-width: 728px) and (min-width: 691px) and (max-height: 708px) and (min-height: 540px)
   .bonus
+    &__start
+      &-logo
+        width: 180px
+    &__text
+      bottom: 95px
+      left: 35px
     &__main
       &-logo
         width: 180px
       &-container
         transform: scale(.5)
+    &__footer
+      &-text
+        font-size: 9px
+        line-height: 15px
 
 
